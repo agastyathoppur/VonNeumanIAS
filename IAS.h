@@ -14,13 +14,13 @@ typedef struct instruction
 
 //Registers
 
-instruction MainMemory[MAX_SIZE];          
+long int MainMemory[MAX_SIZE];          
 int PC[SIZE_PC];
 int MAR;
 int IR;
 int IBR;
-instruction MBR;
-int ACC;
+long int MBR;
+long int ACC;
 int MQ;
 int PC_index = 0;
-int left_flag = 0;          //If we have a single instruction _> by default its right instruction so 0 
+int left_flag = 0;          //If LHS instruction is run and RHS must be run after it, left_flag=1, else, left_flag=0
